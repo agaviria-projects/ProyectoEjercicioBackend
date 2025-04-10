@@ -28,7 +28,7 @@ public class Libro {
 
 
     //Relacion o asociacion de que un libro puede tener varios prestamos
-    @OneToMany(mappedBy = "libro")//Entidad de lirbo toma la relacion uno
+    @OneToMany(mappedBy = "libro")//Entidad de libro toma la relacion uno
     @JsonManagedReference
 
 

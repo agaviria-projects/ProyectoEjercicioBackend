@@ -12,18 +12,20 @@ public class LibroServicio {
     //Instanciar el repositorio del libro
     @Autowired //anotacion que permite inyectar objetos en esta clase (repositorio)
     private LibroRepositorio libroRepositorio;
-    //metodo cosntructor de este servicio clic derecho Generate
+    //metodo constructor de este servicio clic derecho Generate
     public LibroServicio(LibroRepositorio libroRepositorio) {
         this.libroRepositorio = libroRepositorio;
     }
 
     //crear metodo publico para que nos permita guardar un libro
     public Libro saveLibro(Libro libro){
+
         return libroRepositorio.save(libro);
     }
 
     //metodo para listar todos los libros
     public List<Libro> getAllLibros(){
+
         return libroRepositorio.findAll();
     }
 }

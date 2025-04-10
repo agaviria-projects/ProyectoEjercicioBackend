@@ -15,7 +15,7 @@ public class Prestamo {
 
     //Relacion de muchos a uno con libro
     @ManyToOne
-    @JoinColumn(referencedColumnName = "id")
+    @JoinColumn(referencedColumnName = "id") //forenkey de la entidad libro
     @JsonBackReference
     private Libro libro;
 
