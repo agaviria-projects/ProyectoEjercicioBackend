@@ -12,7 +12,7 @@ public class LibroServicio {
     //Instanciar el repositorio del libro
     @Autowired //anotacion que permite inyectar objetos en esta clase (repositorio)
     private LibroRepositorio libroRepositorio;
-    //metodo constructor de este servicio clic derecho Generate
+    //Metodo constructor de este servicio clic derecho Generate
     public LibroServicio(LibroRepositorio libroRepositorio) {
         this.libroRepositorio = libroRepositorio;
     }
