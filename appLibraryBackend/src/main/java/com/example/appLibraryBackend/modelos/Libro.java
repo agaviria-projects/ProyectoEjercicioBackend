@@ -31,9 +31,11 @@ public class Libro {
     @OneToMany(mappedBy = "libro")//Entidad de libro toma la relacion uno
     @JsonManagedReference //PARA Q SE USA
 
-
     private List<Prestamo> prestamos;
 
+    @ManyToOne
+    @JoinColumn(name="categoria_id")
+    private Categoria categoria;
 
     //constructores clic derecho generate
     public Libro(Long id, String name) {
