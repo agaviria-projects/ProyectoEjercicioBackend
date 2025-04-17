@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/libros")
+@RequestMapping("api/libros")
 public class LibroControlador {
     //Inyectar el servicio de libro(libroservicio)
     @Autowired
