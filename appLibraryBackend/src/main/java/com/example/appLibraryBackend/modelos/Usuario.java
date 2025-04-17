@@ -15,8 +15,11 @@ public class Usuario {
     private String nombre;
     private String correo;
 
+    public Usuario() {
+        // Constructor vacío requerido por Spring
+    }
+
     @OneToMany(mappedBy = "usuario", cascade = CascadeType.ALL)
-    @JsonManagedReference
     private List<Prestamo>prestamos;
 
     //Getter y Setter
@@ -45,4 +48,6 @@ public class Usuario {
     public void setCorreo(String correo) {
         this.correo = correo;
     }
+
+
 }

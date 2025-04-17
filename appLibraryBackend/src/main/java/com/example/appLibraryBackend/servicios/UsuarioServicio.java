@@ -19,6 +19,7 @@ public class UsuarioServicio {
     public Usuario guardarUsuario(Usuario usuario){
         return usuarioRepositorio.save(usuario);
     }
+
     public void eliminarUsuario(Long id){
         usuarioRepositorio.deleteById(id);
     }

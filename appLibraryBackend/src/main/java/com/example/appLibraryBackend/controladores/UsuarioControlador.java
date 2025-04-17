@@ -21,6 +21,7 @@ public class UsuarioControlador {
 
     @PostMapping
     public Usuario crearUsuario(@RequestBody Usuario usuario){
+        System.out.println("📥 Recibido en backend: " + usuario.getNombre() + ", " + usuario.getCorreo());
         return usuarioServicio.guardarUsuario(usuario);
     }
 
