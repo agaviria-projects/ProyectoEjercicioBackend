@@ -23,6 +23,18 @@ public class LibroServicio {
         return libroRepositorio.save(libro);
     }
 
+    public Libro getLibroById(Long id) {
+        return libroRepositorio.findById(id).orElse(null);
+    }
+
+    public void deleteLibro(Long id) {
+        libroRepositorio.deleteById(id);
+    }
+
+    public Libro updateLibro(Libro libro) {
+        return libroRepositorio.save(libro);
+    }
+
     //metodo para listar todos los libros
     public List<Libro> getAllLibros(){
         return libroRepositorio.findAll();

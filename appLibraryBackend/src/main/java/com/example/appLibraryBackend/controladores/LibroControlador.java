@@ -26,4 +26,22 @@ public class LibroControlador {
     public List<Libro> getLibrosAll(){
         return libroServicio.getAllLibros();
     }
+    @GetMapping("/{id}")
+    public Libro getLibroById(@PathVariable Long id) {
+        return libroServicio.getLibroById(id);
+    }
+    @DeleteMapping("/{id}")
+    public void deleteLibro(@PathVariable Long id) {
+        libroServicio.deleteLibro(id);
+    }
+    @PutMapping("/{id}")
+    public Libro updateLibro(@PathVariable Long id, @RequestBody Libro libro) {
+        libro.setId(id);
+        return libroServicio.updateLibro(libro);
+    }
+
+
+
+
+
 }
