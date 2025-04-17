@@ -25,7 +25,6 @@ public class LibroServicio {
 
     //metodo para listar todos los libros
     public List<Libro> getAllLibros(){
-
         return libroRepositorio.findAll();
     }
 }

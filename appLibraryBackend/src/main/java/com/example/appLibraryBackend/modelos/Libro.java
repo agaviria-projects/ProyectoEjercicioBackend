@@ -23,8 +23,8 @@ public class Libro {
     //@Column(name="idbook", nullable = false,length = 20, unique = true)
     @Column(length = 20)
     private Long id;
-    @Column(nullable=false, length = 30)
-    private  String name;
+    @Column(nullable=false,length = 30)
+    private String name;
 
 
     //Relacion o asociacion de que un libro puede tener varios prestamos
@@ -35,6 +35,7 @@ public class Libro {
 
     @ManyToOne
     @JoinColumn(name="categoria_id")
+    @JsonBackReference
     private Categoria categoria;
 
     //constructores clic derecho generate
@@ -57,6 +58,9 @@ public class Libro {
     }
 
     public void setName(String name) {
-        this.name = name;
+        this.name= name;
+    }
+
+    public Libro() {
     }
 }
