@@ -5,6 +5,7 @@ import com.example.appLibraryBackend.modelos.Usuario;
 import com.example.appLibraryBackend.servicios.PrestamoServicio;
 import com.example.appLibraryBackend.servicios.UsuarioServicio;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -22,8 +23,12 @@ public class PrestamoControlador {
 
     @PostMapping
     public Prestamo guardar(@RequestBody Prestamo prestamo){
+        System.out.println("👀 Préstamo recibido: " + prestamo);
+        System.out.println("📚 Libro: " + (prestamo.getLibro() != null ? prestamo.getLibro().getId() : "null"));
+        System.out.println("👤 Usuario: " + (prestamo.getUsuario() != null ? prestamo.getUsuario().getId() : "null"));
         return prestamoServicio.guardarPrestamo(prestamo);
     }
+
 
     @GetMapping("/{id}")
     public Prestamo buscar(@PathVariable Long id){

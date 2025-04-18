@@ -20,7 +20,8 @@ public class Usuario {
     }
 
     @OneToMany(mappedBy = "usuario", cascade = CascadeType.ALL)
-    private List<Prestamo>prestamos;
+    @JsonManagedReference(value = "usuario-prestamos")
+    private List<Prestamo> prestamos;
 
     //Getter y Setter
 
